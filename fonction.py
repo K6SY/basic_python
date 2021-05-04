@@ -61,7 +61,7 @@ print(f"Le factoriel de {z} est de {resultat}")
 def facto():
     n=int(input("Indiquer un nombre\t"))
     if n <= 1:
-        return 1
+        return n,1
     else:
         valeur=1
         for i in range(1,n+1):
