@@ -9,6 +9,7 @@
     des quotes simples soit par des quotes doubles.
 '''
 
+
 #Afficher une chaine de caractère en python
 print("Bonjour, Bienvenue dans mon blog")
 

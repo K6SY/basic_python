@@ -16,6 +16,7 @@
     (*) Nous utilisons le symbole (=) pour affecter une valeur à la variable.
 
     (*) La fonction input permet de récupérer la saisie au clavier
+    (*) Le type de la variable récupérant la saisie de l'utilisateur est toujours <str>
 '''
 
 #Affection de variables
@@ -49,3 +50,11 @@ print('Bonjour Mr/Mme {} {} .Vous avez {} ans'.format(nom,prenom,age))
 
 #Technique 4
 print(f'Bonjour Mr/Mme {nom} {prenom} .Vous avez {age} ans')
+
+
+#Affichage multiligne
+
+print("Each observable variable can be enriched with a number of observers. \
+An observer is a function (a kind of callback) which will be invoked automatically each time a specified event occurs in the variable’s life. \
+The number of observers is not limited. \
+Adding an observer to a variable is done by a method named trace(): obsid = variable.trace(trace_mode, observer)")

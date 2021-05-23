@@ -11,6 +11,10 @@
 
     NB: Input renvoie uniquement des strings. Pour utiliser la 
     valeur saisie avec un autre type, il faudra la caster
+
+
+    L'opérateur + permet de faire la concaténation de 2 chaines de caractères
+    L'opérateur * entre une chaine et un entier permet de faire une duplication.
 '''
 
 #Equation du second degré dans IR : ax2 + bx +c =0
