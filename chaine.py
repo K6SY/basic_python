@@ -1,131 +1,64 @@
-'''
-    les chaines sont délimités par :
-        - des quotes doubles ("contenu de la chaine")
-        - des quotes simples ('contenu de la chaine')
-'''
+chaine1="Bonjour. Nous sommes entrain de voir les chaines des caractères"
 
-chaine1="J'ai cours de python tous les Mardis"
-chaine2='En tant qu\'informaticien, je veux apprendre python'
+chaine='Le responsable est responsable.'
 
 '''
-    - Longueur d'une chaine : Usage de la fonction len qui renvoie le 
-    nombre de caractères de la chaine
+#L'opérateur IN permet de tester l'apartenance d'u caractère/mot/groupe de mot dans une chaine
 
-    Syntaxe: variable = len(chaine)
+print('f' in chaine2)
 
-    NB: les espaces, les caractères spéciaux sont comptabilisés
+print('e' in chaine1)
 
-    - Fonctions spécifiques: Les fonctions qui ne peuvent être utilisés
-    que par un type de données bien précis.
+#Capitalize: mettre le premier caratère en majuscule et tout le reste en miniscule
 
-    Syntaxe Fonction specifique: variable.fonction()
-    Syntaxe Fonction specifique: fonction(variable)
+str_maj="JE SUIS EN MAJUSCULE"
 
-    - Obtenir de l'aide pour les chaines: 
-        * Executer la commande python
-        * help(str)
+str_cap=str_maj.capitalize()
 
-    - Les chaines de caractères sont indexés. 
-    - Les index sont numériques, commencent par 0 et sont incrémentés et continus
+print('Capitalize and Maj |-----> ',str_cap, 'vs', str_maj)
 
-    -----------------------------
-    | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
-    -----------------------------
-    | B | O | N | J | O | U | R |
-    -----------------------------
-    | -7| -6| -5| -4| -3| -2| -1|
-    -----------------------------
-    - Pour accéder aux caractères d'une chaine, voici la syntaxe:
-        chaine[index]
-    
-    - De la gauche vers la droite, les index sont positifs
-    - De la droite vers la gauche, les index sont négatifs
+#Lower : mettre une chaine en miniscule
+str_lower=str_maj.lower()
+print('Min and Maj |-----> ',str_lower, 'vs', str_maj)
+
+#Upper: mettre une chaine en majuscule
+str_upper=str_cap.upper()
+print('maj and Cap |-----> ',str_upper, 'vs', str_cap)
 
 
-    - Une sous-chaine est obtenue grâce à la syntaxe: 
-        chaine[start:stop:step]
+#Endswith and Startswith: permettent de vérifier si une chaine se termine par ou commence par un mot
 
-        (*) start indique l'index de départ
-        (*) stop est une valeur exclusive et indique l'index d'arrivée (stop-1)
-        (*) step c'est le pas
-        (*) aucun des paramètres n'est obligatoire
+a = input("merci de saisir un mot commençant par << tr >> et se terminant par << er >")
+
+if a.endswith("er") and a.startswith("tr"):
+	print("Bingo. {} respecte la syntaxe requise".format(a))
+else:
+	print("Vous avez surement sommeil") 
 
 '''
-a=len(chaine1)
-b=len(chaine2)
-print('La longueur de la chaine 1  : {}'.format(a))
-#print('La longueur de la chaine 2 : {}'.format(b))
 
-#Captilize - Lower - Upper - isupper - islower
-ch1 = "JE SUIS UNE CHAINE EN MAJUSCULE"
-ch2 = ch1.capitalize()
-ch3 = ch2.upper()
-ch4 = ch3.lower()
-#print(ch1.isupper())
-#print(ch2.islower())
-#print(ch4.islower())
+n = len(chaine)
 
-#Accès aux cractères d'une chaine
-ch1="BONJOUR"
-last=len(ch1)-1
-#print(ch1[last])
-#print(ch1[-2])
+'''	
+	la fonction len permet de récuperer la longueur de la chaine
 
-#La fonction count : retourner le nombre d'occurence d'une sous-chaine
-ch1="on ne veut pas de ce mouton car il n'est pas bon"
+	Les caractères d'une chaine sont indicés:
+		(*) positivement de 0 à n-1 (n étant la longueur de la chaine) de la gauche vers la droite
+		(*) négativement de -1 à -n (n étant la longueur de la chaine) de la droite vers la gauche
 
-#print(ch1.count('e'))
-#print(ch1.count('e',2))
-#print(ch1.count('e',2,6))
-#print(ch1.endswith('bo'))
-#print(ch1.startswith('ne',3,6))
+	Pour accéder à un caractère, chaine [indice]
+'''
+print(f"chaine2 a une taille de {n} caractères, dont le premier est << {chaine[0]} >> et le dernier est << {chaine[n-1]} >>")
+
+print(chaine[-1])
+
+#1ere technique de parcours d'une chaine
+
+for i in range(0,n):
+	print(f'le caractère {chaine[i]} est à la position {i+1} ')
 
 
+#2e technique
 
-#Création d'une fonction pour la saisie d'un entier
-#usage isalpha - isdigit
-def entier():
-    n = input("Merci de saisir un entier?\t")
-    while True:
-        if n.isdigit():
-            n=int(n)
-            break
-        else:
-            print("Désolé. Vous n'avez pas saisi un entier.")
-            n = input("Merci de saisir un entier?\t")
-    return n
-    #print(n.isalpha())
-    #print(n.isdigit())
-
-
-#Usage du replace
-
-chaine1=input("Merci de saisir votre resenti?\n")
-#print('-------')
-#print(chaine1)
-chaine2=chaine1.replace('bien','mal')
-#print(chaine2)
-
-#Sous-chaine
-ch1="on ne veut pas de ce mouton car il n'est pas bon"
-
-#Sous-chaine  : Tous les paramètres
-ssch1 = ch1[0:27:1]
-
-#Sous-chaine : absence start
-ssch1 = ch1[:27]
-
-#Sous-chaine : absence stop,step
-ssch2 = ch1[27:]
-
-#Sous-chaine : absence start,stop
-ssch3 = ch1[:]
-
-#Inverser une chaine
-ssch4 = ch1[::-1]
-
-print(ssch1)
-print(ssch2)
-print(ssch3)
-print(ssch4)
-
+for i in chaine:
+        print(f'{i}',end=' ** ')
