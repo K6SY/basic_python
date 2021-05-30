@@ -1,4 +1,15 @@
 '''
+
+
+    Syntaxe Bloc
+
+    keyword expression:
+        instruction1
+        instruction2
+        instruction3
+
+
+
     (*) Les if ...elif...else sont des instructions de type block
     (*) Les conditions évaluées doivent être des booléens
     (*) On peut avoir plusieurs elif
@@ -9,7 +20,7 @@
     if condition:
         instuction1
         instruction2
-    elif codition1:
+    elif condition1:
         instuction3
         instruction4
     else:

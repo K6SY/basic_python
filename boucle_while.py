@@ -1,7 +1,7 @@
 '''
     Les boucles sont des instructions de types block
 
-    while condition:
+    while conditions:
         instructions
         instruction_speciale
 
@@ -35,3 +35,26 @@ while i>0:
     i=i//1    ----> i//=1
 
 '''
+
+#L'instruction break : Permet de sortir complétement de la boucle
+#Descendant
+print("#### Reverse way with break ######")
+cpt=y
+while True:
+    if cpt >= 1:
+        z = x * cpt
+        print(f"{x} x {cpt} = {z}")
+        cpt=cpt-1
+    else:
+        break
+
+#L'instruction continue : Permet d'ignorer le reste des instructions d'une itération et passe à l'itération suivante
+print("#### Odd numbers : Reverse way with continue ######")
+cpt=y
+while cpt >= 1:
+    if cpt%2 != 0:
+        cpt=cpt-1
+        continue
+    z = x * cpt
+    print(f"{x} x {cpt} = {z}")
+    cpt=cpt-1
