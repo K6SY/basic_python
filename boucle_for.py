@@ -1,7 +1,11 @@
 '''
-    Les boucles sont des instrctions de types block
+    Les boucles sont des instructions de types block
 
-    NB: Si le paramètre step est omis, alors le pas par défuat est de 1
+    NB: 
+        (*) Si le paramètre step est omis, alors le pas par défuat est de 1
+
+        (*) La valeur stop est exclusif (la boucle s'arrêtera à stop-1)
+
 
     Syntaxe
 
