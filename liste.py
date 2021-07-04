@@ -80,3 +80,20 @@ l1.reverse()
 l1.sort(reverse=True)
 #print(l1)
 
+#Sous-liste
+
+l1 = [1,6,14,3,67,90,23]
+l2 = l1[0:3:1]
+
+n = len(l2)
+#parcourir une liste : technique 1
+for i in range (n):
+    print(f'{l2[i]} est à l\'indice {i}')
+
+print('########')
+
+#parcourir une liste : technique 2
+for i in l2:
+    #La fonction index permet d'avoir l'indice d'un élément dans un tuple
+    print(f'{i}')
+

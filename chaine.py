@@ -1,3 +1,36 @@
+'''
+	(*) Les chaines sont définies en utilisant des quotes simples (') ou des quotes doubles (")
+
+	(*) les fonctions générales s'appliquent à plusieurs types d'objets:
+		- len : renvoyer la longueur d'un élément
+		- del : supprimer un élément
+		- Syntaxe: fonction_generale(element)
+
+	(*) Les fonction spécifiques s'appliquent à un type particulier
+		- Pour les chaines:
+			* upper: Mettre en majuscules
+			* lower: mettre en miniscules
+		- Syntaxe: element.fonction_specifique(parametre)
+
+	 Exemple:
+	 	chaine = 'Bonjour'
+		chaine1 = "Bonjour"
+
+	_____________________________
+	| 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+	_____________________________
+	| B | o | n | j | o | u | r |
+	_____________________________
+	|-7 |-6 |-5 |-4 |-3 |-2 |-1 |
+	_____________________________
+
+
+	(*) Accès aux caractères d'une chaine: 
+		- chaine[indice]
+
+'''
+
+
 chaine1="Bonjour. Nous sommes entrain de voir les chaines des caractères"
 
 chaine='Le responsable est responsable.'
@@ -62,3 +95,33 @@ for i in range(0,n):
 
 for i in chaine:
         print(f'{i}',end=' ** ')
+
+
+#Sous-chaine
+
+'''
+    sc = chaine [start: stop: step]
+
+'''
+
+chaine="Seminaire Python ISI"
+
+#Sous-chaine   avec  start - stop. steppar défaut vaut  1
+sc1=chaine[0:9]
+#print(sc1)
+
+#Sous-chaine avec  start - stop - step
+sc2=chaine[0:9:2]
+#print(sc2)
+
+#Omission du start - Si on commence par 0
+sc3=chaine[:9]
+#print(sc3)
+
+#Omission du stop - Si on termine à la fin
+sc4=chaine[9:]
+print(sc4)
+
+#Inversion chaine
+ci=chaine[::-1]
+print(ci)
