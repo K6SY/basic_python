@@ -1,5 +1,6 @@
 def palindrome(mot):
     mot_inverse=mot[::-1]
+    print(mot_inverse)
     return mot == mot_inverse
 
 m=input("Veuillez saisir un mot?\t")

@@ -1,7 +1,7 @@
 '''
     (*) Définition d'une liste: 
         variable = [valeur1, valeur2, ...,valeurN ]
-    (*) Le indices sont nuémriques, continues et auto-incrémentés
+    (*) Le indices sont numériques, continues et auto-incrémentés
     (*) Les valeurs peuvent être de tout type (simple comme complexe)
     (*) Les listes sont modifiables
     (*) Les indices commencent par 0

@@ -39,3 +39,26 @@ else:
 	print(f"Vous allez mourir à {c} ans")
 finally:
 	print("Aurevoir. Le Genie vous remercie")
+
+
+
+somme=0
+while True:
+    try:
+        n = int(input('Veuiller saisir un entier '))
+        q = 100//n
+    except ValueError:
+        print(f"La valeur ne peut être convertie en entier. Merci de saisir un entier différent de 0")
+    except ZeroDivisionError:
+        print(f"La division par zéro n'est pas autorisée. Merci de saisir un entier différent de 0")
+    except:
+        print("Des erreurs sont survenus")
+    else:
+        old_somme = somme
+        somme += q
+        print(f'{old_somme} + {q} = {somme}')
+    finally:
+        print("Vous me verrez à chaque execution")
+
+    if somme > 20:
+        break
